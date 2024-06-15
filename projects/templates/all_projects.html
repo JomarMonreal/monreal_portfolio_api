@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Projects</h1>
+  
+<ul>
+  {% for x in myprojects %}
+    <li>{{ x.title }} {{ x.description }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
