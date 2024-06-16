@@ -6,7 +6,10 @@
   
 <ul>
   {% for x in myprojects %}
-    <li>{{ x.title }} {{ x.description }}</li>
+    <li>
+      <h2>{{ x.title }}</h2>
+      <p>{{ x.description }}<p>     
+    </li>
   {% endfor %}
 </ul>
 
