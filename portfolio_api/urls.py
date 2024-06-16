@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from portfolio_api import settings
 from django.conf.urls.static import static
@@ -24,6 +25,8 @@ urlpatterns = [
     path("projects/", include("projects.urls")),
     path("skills/", include("skills.urls")),
     path('admin/', admin.site.urls),
-    path("api/",include("apis.urls"))
+    path("api/",include("apis.urls")),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'), 
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

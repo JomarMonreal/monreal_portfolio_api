@@ -1,5 +1,6 @@
 # import viewsets
 from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
 
  
 # import local data
@@ -16,6 +17,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
  
     # specify serializer to be used
     serializer_class = ProjectSerializer
+    permission_classes = [IsAuthenticated]
 
 class SkillViewSet(viewsets.ModelViewSet):
     # define queryset
@@ -23,3 +25,4 @@ class SkillViewSet(viewsets.ModelViewSet):
  
     # specify serializer to be used
     serializer_class = SkillSerializer
+    permission_classes = [IsAuthenticated]

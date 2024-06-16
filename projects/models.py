@@ -10,6 +10,7 @@ class Project(models.Model):
     imagePath = models.CharField(max_length=255)
     projectUrl = models.CharField(max_length=255)
     imageUrl = models.CharField(max_length=255)
+    
 
     def __str__(self):
         return self.title
