@@ -11,7 +11,8 @@ router = routers.DefaultRouter()
  
 # define the router path and viewset to be used
 router.register(r'projects', ProjectViewSet)
- 
+router.register(r'skills', SkillViewSet) 
+
 # specify URL Path for rest_framework
 urlpatterns = [
     path('', include(router.urls)),

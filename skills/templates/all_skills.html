@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Skills</h1>
+  
+<ul>
+  {% for x in myskills %}
+    <li>
+      <h2>{{ x.name }}</h2>
+      <p>{{ x.description }}<p>     
+    </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
