@@ -9,7 +9,8 @@ __pycache__/
 */migrations/*
 
 # Ignore compiled static files
-staticfiles/
+staticfiles_build/
 
 # Ignore virtual environment directory
 venv/
+.vercel
